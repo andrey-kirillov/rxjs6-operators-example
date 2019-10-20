@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 /****** Reset ******/
 
@@ -19,6 +20,21 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.cursor-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.w-80 {
+  width: 80%;
+}
+
+.mw-500 {
+  min-width: 500px;
+}
+
 .p-20 {
   padding: 20px;
 }
@@ -26,14 +42,22 @@ body {
 .min-vh-100 {
   min-height: 100vh;
   overflow: auto;
-  box-sizing: border-box;
 }
 
 .sidenav {
   width: 400px;
 }
 
-.editor {
-  width: 1000px;
+.m-auto {
   margin: auto;
 }
+
+.my-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.d-block {
+  display: block;
+}
+

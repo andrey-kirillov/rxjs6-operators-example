@@ -1,12 +1,27 @@
 <mat-sidenav-container>
-  <mat-sidenav class="sidenav min-vh-100 p-20" mode="side" opened >Sidenav content</mat-sidenav>
+  <mat-sidenav #sidenav class="sidenav min-vh-100 p-20" mode="side" opened>
+    <a class="d-block my-10" *ngFor="let link of operatorLinks" [routerLink]="link.title">
+      {{link.title}}
+    </a>
+  </mat-sidenav>
   <mat-sidenav-content>
     <section class="min-vh-100 p-20">
-      <div class="editor">
+      <mat-icon class="cursor-pointer" aria-hidden="false" aria-label="Example home icon"
+                matTooltip="Toggle sidebar"
+                (click)="sidenav.toggle()">menu
+      </mat-icon>
+      <div class="m-auto w-80 mw-500">
         <ngx-codemirror
-          [(ngModel)]="editorContent"
+          [(ngModel)]="dataObj.text"
           [options]="editorOptions"
         ></ngx-codemirror>
+      </div>
+
+      <br/>
+      <br/>
+
+      <div class="m-auto w-80 mw-500" style="min-height: 100px; background: black; color: lightgreen; padding: 20px">
+        {{dataObj.res}}
       </div>
     </section>
   </mat-sidenav-content>
