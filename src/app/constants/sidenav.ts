@@ -6,6 +6,7 @@ interface IOperatorLink {
 const Links: IOperatorLink[] = [
   {title: 'of'},
   {title: 'from'},
+  {title: 'timer'},
 ];
 
 
